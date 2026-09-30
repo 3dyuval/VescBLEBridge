@@ -125,6 +125,8 @@ void setup()
   // Start advertising
   NimBLEAdvertising *pAdvertising = NimBLEDevice::getAdvertising();
   pAdvertising->addServiceUUID(VESC_SERVICE_UUID);
+  pAdvertising->enableScanResponse(true);
+  pAdvertising->setName(BLE_DEVICE_NAME);
 
   pAdvertising->start();
   ESP_LOGI(LOG_TAG_BLESERVER, "waiting a client connection to notify...");
