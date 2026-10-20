@@ -78,6 +78,9 @@ void setup()
   Serial.begin(115200);
   Serial1.begin(VESC_UART_BAUD, SERIAL_8N1, VESC_RX_PIN, VESC_TX_PIN);
 
+  // TEMP DIAGNOSTIC: force byte-level dumpBuffer logging for both directions.
+  esp_log_level_set(LOG_TAG_BLESERVER, ESP_LOG_DEBUG);
+
   // Create the BLE Device
   NimBLEDevice::init(BLE_DEVICE_NAME);
   NimBLEDevice::setPower(BLE_TX_POWER);

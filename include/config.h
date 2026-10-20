@@ -62,4 +62,4 @@
 //#define ENABLE_BLE_SECURITY
 
 // The 6-digit passkey (000000 - 999999) required when ENABLE_BLE_SECURITY is set.
-#define BLE_SECURITY_PASSKEY 123456
+#define BLE_SECURITY_PASSKEY yuval
